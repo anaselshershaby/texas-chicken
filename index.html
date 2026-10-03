@@ -704,6 +704,13 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
 :root{--logo-bg:transparent;--logo-pad:0}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--logo-bg:#fffcf5;--logo-pad:3px 6px}}
 :root[data-theme="dark"]{--logo-bg:#fffcf5;--logo-pad:3px 6px}
+
+#report>section.s.cut{display:none!important}
+#exec-tgl{display:none!important}
+.branch{cursor:default}.branch:hover{transform:none;border-color:var(--line)}
+body:not(.mode-full) .fixes .st-sel{display:none}
+.mode-seg button[aria-pressed="true"]{background:var(--red);color:#fff}
+.mode-seg{background:var(--sunk)}
 </style>
 
 <div class="tip" id="tip" role="tooltip"></div>
@@ -711,7 +718,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
 <header class="bar">
   <div class="wrap">
     <div class="brand"><span class="brand-logo"><img src="data:image/webp;base64,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" alt="Texas Chicken" width="160" height="148"></span>Own the Order</div>
-    <div class="bar-tools"><span class="bk"><button class="btn" id="bk-btn" type="button" hidden title="Upload the client logo from their brand kit">Add client logo</button><button class="btn" id="bk-clear" type="button" hidden>Remove logo</button><input type="file" id="bk-file" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden><span class="sync" id="bk-msg" aria-live="polite"></span></span><div class="gm"><div class="seg" id="g-mkt" role="group" aria-label="Market shown"><button type="button" aria-pressed="true" data-k="Both">Both<span class="lbl-long">&nbsp;markets</span></button><button type="button" aria-pressed="false" data-k="UAE">UAE</button><button type="button" aria-pressed="false" data-k="KSA">KSA</button></div></div><button class="tgl" id="exec-tgl" type="button" aria-pressed="false" title="Show only headlines and key points"><span class="sw" aria-hidden="true"></span>Exec<span class="lbl-long">&nbsp;summary</span></button></div>
+    <div class="bar-tools"><span class="bk"><button class="btn" id="bk-btn" type="button" hidden title="Upload the client logo from their brand kit">Add client logo</button><button class="btn" id="bk-clear" type="button" hidden>Remove logo</button><input type="file" id="bk-file" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden><span class="sync" id="bk-msg" aria-live="polite"></span></span><div class="gm"><div class="seg mode-seg" id="g-mode" role="group" aria-label="Level of detail"><button type="button" aria-pressed="true" data-k="simple" title="The 15-slide summary">Simple</button><button type="button" aria-pressed="false" data-k="full" title="All 34 slides, with the evidence and tools">Full plan</button></div></div><div class="gm"><div class="seg" id="g-mkt" role="group" aria-label="Market shown"><button type="button" aria-pressed="true" data-k="Both">Both<span class="lbl-long">&nbsp;markets</span></button><button type="button" aria-pressed="false" data-k="UAE">UAE</button><button type="button" aria-pressed="false" data-k="KSA">KSA</button></div></div><button class="tgl" id="exec-tgl" type="button" aria-pressed="false" title="Show only headlines and key points"><span class="sw" aria-hidden="true"></span>Exec<span class="lbl-long">&nbsp;summary</span></button></div>
     <nav class="tabs" role="tablist" aria-label="View">
       <button role="tab" id="tab-present" aria-selected="true" data-view="present">Slides</button>
       <button role="tab" id="tab-report" aria-selected="false" data-view="report">Scroll</button>
@@ -723,14 +730,12 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
 
 <div class="bg-sky" id="bg-sky" aria-hidden="true"></div>
 <main id="report" class="deck">
-
-<!-- 1 HERO -->
 <section class="s hero" data-title="Diagnosis">
   <div class="wrap">
     <div>
       <div class="eyebrow">Client brief · Texas Chicken UAE &amp; KSA · Diagnosis and growth plan</div>
       <h1 style="margin-top:14px">The orders are there. <em>Texas Chicken's own channels lose them.</em></h1>
-      <p class="lede">Texas Chicken asked for a strategy to grow app and web conversions. We audited the funnel first. Before any new media spend works, five problems need fixing: the app is too small, the mobile site is very slow, operations problems show up as app reviews, customers see no reason to order direct, and tracking has gaps.</p>
+      <p class="lede">Texas Chicken wants more sales through its app and websites. This page answers five questions: what to investigate, which data answers it, which problems and solutions it points to, how UAE and KSA differ, and how to measure success. Public evidence where it exists, sample data where it doesn't.</p>
       <div class="meta-row"><button class="toss" id="toss" type="button">Toss some chicken</button><span>Prepared by Anas Elshershaby</span><span>October 2026</span><span>Evidence collected 1–2 Oct 2026</span></div>
     </div>
     <div class="ticket-wrap"><div class="ticket" aria-label="Summary ticket of conversion leaks">
@@ -747,7 +752,37 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 2 KEY NUMBERS -->
+<section class="s" data-title="The brief, reframed">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Reading the brief</div><h2>What the client asked, and what the data says</h2></div>
+    <div class="reframe">
+      <div class="panel"><div class="eyebrow">The brief</div><p class="quote" style="margin-top:12px">"Drive sales conversions through our mobile app and web commerce."</p><p class="muted" style="margin-top:12px">Distinct strategies for UAE and KSA, with platforms, tactics, KPIs and ideas.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="panel dark"><div class="eyebrow">The real problem</div><p class="quote" style="margin-top:12px">Spending more on media sends more people into a funnel that loses them.</p><p style="margin-top:12px;opacity:.8">Conversion is limited by speed, trust and value, not by traffic. So the plan works in order: fix the leaks, then add traffic, then keep the customers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="questions" data-title="Business questions">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Question → data → finding → action <span class="badge smp">Sample data</span></div><h2>Seven business questions, and the data that answers each</h2><p class="lede">Each question is something Texas Chicken can answer with data it already has or can start collecting. Select a question to see the data source, a sample finding, the action it leads to and how success is measured. Numbers change with the market switch at the top.</p></div>
+    <div class="q-wrap">
+      <div class="q-list" id="q-list" role="tablist" aria-label="Business questions"></div>
+      <div class="q-detail panel" id="q-detail" aria-live="polite"></div>
+    </div>
+    <p class="src">All internal numbers are invented sample data to show the method; no Texas Chicken data was available. Figures marked "Public" come from the public evidence on the Evidence slides.</p>
+  </div>
+</section>
+
+<section class="s" id="sources" data-title="Data sources">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Data map</div><h2>The data we need, and what each source tells us</h2><p class="lede">Most of the data already exists inside Texas Chicken. It is spread across systems and not yet linked by customer. Linking it is the first job.</p></div>
+    <div class="legend"><span><i style="background:var(--good)"></i>Have: exists today</span><span><i style="background:var(--warn)"></i>Partly: exists but incomplete or not connected</span><span><i style="background:var(--crit)"></i>Need: to be set up</span></div>
+    <div class="tbl-wrap"><table class="dmap" id="dmap"></table></div>
+    <p class="src">"Have / Partly / Need" is an assumption to confirm in week 1, except where the public evidence shows it (for example GA4, TikTok and Snapchat tags on the websites).</p>
+  </div>
+</section>
+
 <section class="s" data-title="Key numbers">
   <div class="wrap">
     <div class="head"><div class="eyebrow">The case in six numbers</div><h2>Strong demand, weak capture</h2></div>
@@ -763,22 +798,9 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 3 BRIEF REFRAMED -->
-<section class="s" data-title="The brief, reframed">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">Reading the brief</div><h2>What the client asked, and what the data says</h2></div>
-    <div class="reframe">
-      <div class="panel"><div class="eyebrow">The brief</div><p class="quote" style="margin-top:12px">"Drive sales conversions through our mobile app and web commerce."</p><p class="muted" style="margin-top:12px">Distinct strategies for UAE and KSA, with platforms, tactics, KPIs and ideas.</p></div>
-      <div class="arrow" aria-hidden="true">→</div>
-      <div class="panel dark"><div class="eyebrow">The real problem</div><p class="quote" style="margin-top:12px">Spending more on media sends more people into a funnel that loses them.</p><p style="margin-top:12px;opacity:.8">Conversion is limited by speed, trust and value, not by traffic. So the plan works in order: fix the leaks, then add traffic, then keep the customers.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 4 ISSUE TREE -->
 <section class="s" data-title="Issue tree">
   <div class="wrap">
-    <div class="head"><div class="eyebrow">Diagnosis</div><h2>Why aren't more orders coming direct?</h2><p class="lede">We split the question into five testable causes and checked each against public evidence. Select a branch to jump to its evidence.</p></div>
+    <div class="head"><div class="eyebrow">Diagnosis</div><h2>Why aren't more orders coming direct?</h2><p class="lede">We split the question into five testable causes and checked each against public evidence.</p></div>
     <div class="tree">
       <div class="tree-root">Direct digital orders are below potential</div>
       <div class="branches">
@@ -792,25 +814,17 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-
-<section class="s" id="questions" data-title="Business questions">
+<section class="s" data-title="Prioritisation">
   <div class="wrap">
-    <div class="head"><div class="eyebrow">Question → data → finding → action <span class="badge smp">Sample data</span></div><h2>Seven business questions, and the data that answers each</h2><p class="lede">Each question is something Texas Chicken can answer with data it already has or can start collecting. Select a question to see the data source, a sample finding, the action it leads to and how success is measured. Numbers change with the market switch at the top.</p></div>
-    <div class="q-wrap">
-      <div class="q-list" id="q-list" role="tablist" aria-label="Business questions"></div>
-      <div class="q-detail panel" id="q-detail" aria-live="polite"></div>
+    <div class="head"><div class="eyebrow">From diagnosis to action</div><h2>Fix the bucket before pouring in more water</h2><p class="lede">Ten fixes, each tied to one of the five problems, scored for impact and effort. Do the quick wins in the top-left first, then the big bets on the right.</p></div>
+    <div class="panel">
+      <div class="matrix-legend" id="mx-legend"></div>
+      <div class="chart" id="ch-matrix"></div>
     </div>
-    <p class="src">All internal numbers are invented sample data to show the method; no Texas Chicken data was available. Figures marked "Public" come from the public evidence on the Evidence slides.</p>
+    <div class="fixes" id="fixes"></div>
   </div>
 </section>
-<section class="s" id="sources" data-title="Data sources">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">Data map</div><h2>The data we need, and what each source tells us</h2><p class="lede">Most of the data already exists inside Texas Chicken. It is spread across systems and not yet linked by customer. Linking it is the first job.</p></div>
-    <div class="legend"><span><i style="background:var(--good)"></i>Have: exists today</span><span><i style="background:var(--warn)"></i>Partly: exists but incomplete or not connected</span><span><i style="background:var(--crit)"></i>Need: to be set up</span></div>
-    <div class="tbl-wrap"><table class="dmap" id="dmap"></table></div>
-    <p class="src">"Have / Partly / Need" is an assumption to confirm in week 1, except where the public evidence shows it (for example GA4, TikTok and Snapchat tags on the websites).</p>
-  </div>
-</section>
+
 <section class="s" id="behaviour" data-title="UAE vs KSA customers">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Customer behaviour <span class="badge smp">Sample data</span></div><h2>Two markets, two customers</h2><p class="lede">What the linked data would show about how people order in each market, and what we would do differently because of it.</p></div>
@@ -818,6 +832,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
     <div class="chart panel" id="ch-daypart"></div>
   </div>
 </section>
+
 <section class="s" id="ai" data-title="Where AI fits">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Data, technology and AI</div><h2>Five practical uses of AI</h2><p class="lede">Each one turns a data source into a daily action. None of them needs a big platform to start: a data warehouse, the existing marketing tools and a small model are enough.</p></div>
@@ -825,8 +840,80 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 5 REACH -->
-<section class="s" id="f-reach" data-title="01 · Reach">
+<section class="s" id="web-messages" data-title="Website messages">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Web marketing <span class="badge smp">Sample data</span></div><h2>Website pop-up messages that move visitors to order</h2><p class="lede">Five on-site messages, each triggered by what the visitor is doing. Every message points to an order on the website or a download of the app, and every order earns a stamp. Select a trigger to preview it.</p></div>
+    <div class="wm">
+      <div class="tbl-wrap"><table id="wm-t"></table></div>
+      <div class="wm-prev panel"><div class="small muted" id="wm-cap"></div><div class="browser"><div class="b-bar"><i></i><i></i><i></i><span id="wm-url">texaschicken.com</span></div><div class="b-body"><div class="b-ghost"></div><div class="b-ghost s"></div><div class="b-pop" id="wm-pop"></div></div></div></div>
+    </div>
+    <p class="src">Each message is measured against a 10% holdout of visitors who don't see it. Show at most one message per visit, and never on the checkout page itself.</p>
+  </div>
+</section>
+
+<section class="s" id="reward-ladder" data-title="3-reward ladder">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Loyalty strategy <span class="badge smp">Sample data</span></div><h2>Three rewards to build the habit</h2><p class="lede">Most customers stop after their first order. A customer who has received three rewards is far more likely to keep ordering. So the first reward comes at the second order, not the eighth, and the third reward makes the customer a Gold member.</p></div>
+    <div class="ladder" id="ladder"></div>
+    <div class="grid2">
+      <div class="panel"><h4 style="margin:0 0 4px">90-day retention by rewards redeemed</h4><div class="sub small muted" style="margin-bottom:10px">Hypothesis to test, sample numbers</div><div class="chart" id="ch-ladder"></div></div>
+      <div class="panel calc-break" id="ladder-econ" style="margin:0"></div>
+    </div>
+    <p class="src">The 8-stamp Tex Rewards card stays as the long-term layer once a customer reaches Gold. Data needed: order system, loyalty records and reward redemptions, linked by customer.</p>
+  </div>
+</section>
+
+<section class="s" id="measure" data-title="Measuring success">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Measurement</div><h2>How we'll know each solution works</h2><p class="lede">Every solution is tested against a control group before it is rolled out, with a success rule and a stop rule agreed in advance.</p></div>
+    <div class="tbl-wrap"><table id="msr"></table></div>
+    <p class="src">Targets are sample values tied to the assumed baselines. Results are read weekly in the dashboard and decided on at the end of each test period.</p>
+  </div>
+</section>
+
+<section class="s" data-title="Impact model">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Impact model</div><h2>What six months could deliver</h2><p class="lede">Direct digital orders per month (thousands) from November 2026 to April 2027, peaking over Ramadan, which is expected to start around 8 February 2027. Switch scenarios to test sensitivity.</p></div>
+    <div class="panel">
+      <div class="ctrl-row" style="margin-bottom:10px">
+        <div class="legend" style="margin:0"><span data-only="KSA"><i style="background:var(--ksa)"></i>KSA</span><span data-only="UAE"><i style="background:var(--uae)"></i>UAE</span></div>
+        <div class="seg" id="seg-scn" role="group" aria-label="Scenario"><button aria-pressed="false" data-k="0.5">Conservative</button><button aria-pressed="true" data-k="1">Base</button><button aria-pressed="false" data-k="1.5">Ambitious</button></div>
+      </div>
+      <div class="chart" id="ch-impact"></div>
+      <div class="stats s4" id="impact-stats" style="margin-top:18px"></div>
+      <p class="src">Illustrative model. Baselines are assumptions (UAE 30K, KSA 70K direct orders a month; AOV AED 48 / SAR 52) to be replaced with client data in week 1. Revenue is gross order value, before food cost.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" data-title="Roadmap">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Timeline</div><h2>Fix → Fill → Keep</h2></div>
+    <div class="road">
+      <div class="phase"><span class="w">Weeks 1–6 · Nov–mid Dec</span><h3>Fix</h3><ul class="clean"><li>Tracking rebuild: attribution tool, conversion APIs, schema</li><li>Mobile web performance sprint (target LCP under 4 s, then 2.5 s)</li><li>Promo QA, price parity, deal hero, smart app banner</li><li>Ops loop: delivery-time alerts and pickup prepared on order</li></ul></div>
+      <div class="phase"><span class="w">Weeks 7–14 · Dec–Jan</span><h3>Fill</h3><ul class="clean"><li>Install and first-order campaigns, Snap-first in KSA</li><li>Arabic App Store listing and app store optimisation</li><li>Website messages and the 3-reward ladder go live</li><li>UAE National Day, Riyadh Season, DSF bursts</li></ul></div>
+      <div class="phase hot"><span class="w">Weeks 15–26 · Feb–Apr</span><h3>Keep</h3><ul class="clean"><li>Ramadan offers timed to Iftar and late night</li><li>Automatic vouchers for late app orders</li><li>WhatsApp reorders; post-Eid win-back</li><li>Geo-holdout test to prove incremental orders</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="s close" data-title="Next steps">
+  <span class="food-accent" data-food="drum" style="right:6%;top:18%"></span><span class="food-accent" data-food="burger" style="right:16%;bottom:12%;width:140px"></span><span class="food-accent" data-food="fries" style="right:2%;bottom:30%;width:70px"></span>
+  <div class="wrap">
+    <div class="eyebrow">Next steps</div>
+    <h2>Week one</h2>
+    <ol>
+      <li>Get access to GA4, the GTM container, the app analytics, ad accounts and order data.</li>
+      <li>Replace the assumed baselines with real figures and agree the KPI targets.</li>
+      <li>Start the performance sprint and the tracking rebuild at the same time.</li>
+      <li>Set up the joint ops and digital loop with an owner for delivery-time alerts.</li>
+      <li>Connect the live dashboard so the client can track every metric on this page.</li>
+    </ol>
+    <p style="opacity:.7;margin-top:10px">Thank you. Anas Elshershaby</p>
+  </div>
+</section>
+
+<section class="s cut" id="f-reach" data-title="01 · Reach">
   <div class="wrap finding">
     <div class="copy">
       <span class="tno">TICKET 01 · REACH · CRITICAL</span>
@@ -847,8 +934,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 6 SPEED -->
-<section class="s" id="f-speed" data-title="02 · Speed">
+<section class="s cut" id="f-speed" data-title="02 · Speed">
   <div class="wrap finding">
     <div class="copy">
       <span class="tno">TICKET 02 · SPEED · CRITICAL</span>
@@ -870,8 +956,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 7 TRUST -->
-<section class="s" id="f-trust" data-title="03 · Trust">
+<section class="s cut" id="f-trust" data-title="03 · Trust">
   <div class="wrap finding">
     <div class="copy">
       <span class="tno">TICKET 03 · TRUST · CRITICAL</span>
@@ -896,8 +981,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-
-<section class="s" id="voices" data-title="Customer voices">
+<section class="s cut" id="voices" data-title="Customer voices">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Evidence locker</div><h2>Hear it from customers</h2><p class="lede">72 real app-store reviews from 2025–2026, tagged by theme. Search them, or filter by theme, rating and source to check the diagnosis yourself.</p></div>
     <div class="rx-ctrl">
@@ -910,8 +994,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 8 VALUE -->
-<section class="s" id="f-value" data-title="04 · Value">
+<section class="s cut" id="f-value" data-title="04 · Value">
   <div class="wrap finding">
     <div class="copy">
       <span class="tno">TICKET 04 · VALUE · HIGH</span>
@@ -944,8 +1027,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 9 TRACKING -->
-<section class="s" id="f-track" data-title="05 · Measurement">
+<section class="s cut" id="f-track" data-title="05 · Measurement">
   <div class="wrap finding">
     <div class="copy">
       <span class="tno">TICKET 05 · MEASUREMENT · HIGH</span>
@@ -975,26 +1057,14 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 10 PRIORITISATION -->
-<section class="s" data-title="Prioritisation">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">From diagnosis to action</div><h2>Fix the bucket before pouring in more water</h2><p class="lede">Ten fixes, each mapped to a ticket, scored for impact and effort. Do the quick wins in the top-left first, then the big bets on the right.</p></div>
-    <div class="panel">
-      <div class="matrix-legend" id="mx-legend"></div>
-      <div class="chart" id="ch-matrix"></div>
-    </div>
-  </div>
-</section>
-<section class="s" id="tracker" data-title="Action tracker">
+<section class="s cut" id="tracker" data-title="Action tracker">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Action tracker</div><h2>Ten fixes, one owner each</h2><p class="lede">Set a status for each fix. Everyone who opens this page sees the same progress.</p></div>
     <div class="trk"><div><b>Action tracker</b><div class="sync" id="trk-sync"></div></div><div class="bar2" id="trk-bar" aria-hidden="true"></div><div class="lg" id="trk-lg"></div><button class="btn" id="dl-plan" type="button" hidden>Export CSV</button></div>
-    <div class="fixes" id="fixes"></div>
   </div>
 </section>
 
-
-<section class="s" id="simulator" data-title="Fix simulator">
+<section class="s cut" id="simulator" data-title="Fix simulator">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Fix simulator</div><h2>Choose the fixes, see the orders</h2><p class="lede">Turn fixes on and off to see how much each one adds to direct orders. Try the install engine without the speed and delivery fixes: the funnel loses half of what the media brings in.</p></div>
     <div class="sim">
@@ -1015,8 +1085,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 11 MARKETS -->
-<section class="s" data-title="Market playbooks">
+<section class="s cut" data-title="Market playbooks">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Two markets, two playbooks</div><h2>Same engine, different fuel</h2></div>
     <div class="grid2">
@@ -1040,7 +1109,8 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
 
   </div>
 </section>
-<section class="s" id="budget" data-title="Budget planner">
+
+<section class="s cut" id="budget" data-title="Budget planner">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Budget planner</div><h2>What each budget level buys</h2></div>
     <div class="panel">
@@ -1055,8 +1125,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 12 IDEAS -->
-<section class="s" data-title="Big ideas">
+<section class="s cut" data-title="Big ideas">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Ideas &amp; innovation</div><h2>Five ideas that end in an app order</h2></div>
     <div class="ideas">
@@ -1069,7 +1138,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<section class="s" id="journey" data-title="Loyalty journey">
+<section class="s cut" id="journey" data-title="Loyalty journey">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Journey builder · App, web, push, WhatsApp</div><h2>Build the journey from first order to free reward</h2><p class="lede">Design the messages a customer receives after they install the app or order on the website. Each step can carry an app-only or web-only discount, and every direct order earns a stamp on the digital loyalty card. Eight stamps unlock a reward. Orders through delivery aggregators earn nothing.</p></div>
 
@@ -1098,7 +1167,8 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
 
   </div>
 </section>
-<section class="s" id="journey-forecast" data-title="Journey forecast">
+
+<section class="s cut" id="journey-forecast" data-title="Journey forecast">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Journey forecast</div><h2>What the journey delivers, and where it could go wrong</h2><p class="lede">The forecast updates from the journey you built on the previous slide. Change the cohort size to see the effect.</p></div>
     <div class="grid2">
@@ -1119,29 +1189,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<section class="s" id="web-messages" data-title="Website messages">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">Web marketing <span class="badge smp">Sample data</span></div><h2>Website pop-up messages that move visitors to order</h2><p class="lede">Five on-site messages, each triggered by what the visitor is doing. Every message points to an order on the website or a download of the app, and every order earns a stamp. Select a trigger to preview it.</p></div>
-    <div class="wm">
-      <div class="tbl-wrap"><table id="wm-t"></table></div>
-      <div class="wm-prev panel"><div class="small muted" id="wm-cap"></div><div class="browser"><div class="b-bar"><i></i><i></i><i></i><span id="wm-url">texaschicken.com</span></div><div class="b-body"><div class="b-ghost"></div><div class="b-ghost s"></div><div class="b-pop" id="wm-pop"></div></div></div></div>
-    </div>
-    <p class="src">Each message is measured against a 10% holdout of visitors who don't see it. Show at most one message per visit, and never on the checkout page itself.</p>
-  </div>
-</section>
-
-<section class="s" id="reward-ladder" data-title="3-reward ladder">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">Loyalty strategy <span class="badge smp">Sample data</span></div><h2>Three rewards to build the habit</h2><p class="lede">Most customers stop after their first order. A customer who has received three rewards is far more likely to keep ordering. So the first reward comes at the second order, not the eighth, and the third reward makes the customer a Gold member.</p></div>
-    <div class="ladder" id="ladder"></div>
-    <div class="grid2">
-      <div class="panel"><h4 style="margin:0 0 4px">90-day retention by rewards redeemed</h4><div class="sub small muted" style="margin-bottom:10px">Hypothesis to test, sample numbers</div><div class="chart" id="ch-ladder"></div></div>
-      <div class="panel calc-break" id="ladder-econ" style="margin:0"></div>
-    </div>
-    <p class="src">The 8-stamp Tex Rewards card stays as the long-term layer once a customer reaches Gold. Data needed: order system, loyalty records and reward redemptions, linked by customer.</p>
-  </div>
-</section>
-<section class="s" id="loyalty-card" data-title="Loyalty card">
+<section class="s cut" id="loyalty-card" data-title="Loyalty card">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Digital loyalty card</div><h2>Tex Rewards card: collect 8 stamps, get a reward</h2><p class="lede" style="font-size:17px">Try it: place orders through each channel and watch the card fill up. App orders on double-stamp days earn two stamps. Completing a card moves the customer up a tier.</p></div>
     <div class="lc-wrap">
@@ -1165,7 +1213,8 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
 
   </div>
 </section>
-<section class="s" id="scratch" data-title="Scratch & win">
+
+<section class="s cut" id="scratch" data-title="Scratch & win">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Instant win</div><h2>Scratch &amp; win for new app members</h2><p class="lede" style="font-size:17px">A fun first moment in the app: scratch to reveal a welcome prize. Every prize can only be used in the app or on the website, and it starts the loyalty card.</p></div>
     <div class="sw">
@@ -1179,7 +1228,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<section class="s" id="menu" data-title="Menu spotlight">
+<section class="s cut" id="menu" data-title="Menu spotlight">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Menu spotlight</div><h2>Every menu line has a job in the funnel</h2><p class="lede">The menu categories on uae. and ksa.texaschicken.com, each given a role: win new customers, convert them, raise order value or bring them back. Filter by role.</p></div>
     <div class="chipset" id="mn-roles" role="group" aria-label="Funnel role"></div>
@@ -1188,33 +1237,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-
-<section class="s" id="measure" data-title="Measuring success">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">Measurement</div><h2>How we'll know each solution works</h2><p class="lede">Every solution is tested against a control group before it is rolled out, with a success rule and a stop rule agreed in advance.</p></div>
-    <div class="tbl-wrap"><table id="msr"></table></div>
-    <p class="src">Targets are sample values tied to the assumed baselines. Results are read weekly in the dashboard and decided on at the end of each test period.</p>
-  </div>
-</section>
-
-<!-- 13 IMPACT -->
-<section class="s" data-title="Impact model">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">Impact model</div><h2>What six months could deliver</h2><p class="lede">Direct digital orders per month (thousands) from November 2026 to April 2027, peaking over Ramadan, which is expected to start around 8 February 2027. Switch scenarios to test sensitivity.</p></div>
-    <div class="panel">
-      <div class="ctrl-row" style="margin-bottom:10px">
-        <div class="legend" style="margin:0"><span data-only="KSA"><i style="background:var(--ksa)"></i>KSA</span><span data-only="UAE"><i style="background:var(--uae)"></i>UAE</span></div>
-        <div class="seg" id="seg-scn" role="group" aria-label="Scenario"><button aria-pressed="false" data-k="0.5">Conservative</button><button aria-pressed="true" data-k="1">Base</button><button aria-pressed="false" data-k="1.5">Ambitious</button></div>
-      </div>
-      <div class="chart" id="ch-impact"></div>
-      <div class="stats s4" id="impact-stats" style="margin-top:18px"></div>
-      <p class="src">Illustrative model. Baselines are assumptions (UAE 30K, KSA 70K direct orders a month; AOV AED 48 / SAR 52) to be replaced with client data in week 1. Revenue is gross order value, before food cost.</p>
-    </div>
-  </div>
-</section>
-
-
-<section class="s" id="moments" data-title="Moments">
+<section class="s cut" id="moments" data-title="Moments">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Live calendar</div><h2>The moments that matter, counted down</h2><p class="lede">The plan builds to Ramadan, the highest-value weeks of the year in both markets. The fixes need to be live before it starts.</p></div>
     <div class="mom">
@@ -1224,20 +1247,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-<!-- 14 ROADMAP -->
-<section class="s" data-title="Roadmap">
-  <div class="wrap">
-    <div class="head"><div class="eyebrow">Timeline</div><h2>Fix → Fill → Keep</h2></div>
-    <div class="road">
-      <div class="phase"><span class="w">Weeks 1–6 · Nov–mid Dec</span><h3>Fix</h3><ul class="clean"><li>Tracking rebuild: attribution tool, conversion APIs, schema</li><li>Mobile web performance sprint (target LCP under 4 s, then 2.5 s)</li><li>Promo QA, price parity, deal hero, smart app banner</li><li>Ops loop: delivery-time alerts and pickup prepared on order</li></ul></div>
-      <div class="phase"><span class="w">Weeks 7–14 · Dec–Jan</span><h3>Fill</h3><ul class="clean"><li>Install and first-order campaigns, Snap-first in KSA</li><li>Arabic App Store listing and app store optimisation</li><li>Texas Heat Meter lens; creator series</li><li>UAE National Day, Riyadh Season, DSF bursts</li></ul></div>
-      <div class="phase hot"><span class="w">Weeks 15–26 · Feb–Apr</span><h3>Keep</h3><ul class="clean"><li>Maghrib Countdown and Ramadan Tex Streaks</li><li>On-Time or It's On Us guarantee</li><li>WhatsApp reorders; post-Eid win-back</li><li>Geo-holdout test to prove incremental orders</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- 15 SYSTEM -->
-<section class="s" data-title="Operating system">
+<section class="s cut" data-title="Operating system">
   <div class="wrap">
     <div class="head"><div class="eyebrow">How we run it</div><h2>The system behind the plan</h2><p class="lede">This page is the living plan. The Dashboard tab shows how the production tracker would look. Built for real, it connects the data sources below to one warehouse and one shared view for marketing and operations.</p></div>
     <div class="flow">
@@ -1249,8 +1259,7 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
   </div>
 </section>
 
-
-<section class="s" id="ask" data-title="Ask the plan">
+<section class="s cut" id="ask" data-title="Ask the plan">
   <div class="wrap">
     <div class="head"><div class="eyebrow">Ask the plan</div><h2>Questions? Ask this report</h2><p class="lede">Claude answers using only the findings, numbers and plan on this page.</p></div>
     <div class="ask" id="ask-box">
@@ -1259,23 +1268,6 @@ body.on-hero .bg-sky,body.view-dash .bg-sky{opacity:0}
       <div class="ask-out empty" id="ask-out">Pick a suggested question or type your own.</div>
     </div>
     <p class="small muted" id="ask-na" hidden>Asking questions works when this page is opened in Claude. All the content above is still available to read.</p>
-  </div>
-</section>
-
-<!-- 16 CLOSE -->
-<section class="s close" data-title="Next steps">
-  <span class="food-accent" data-food="drum" style="right:6%;top:18%"></span><span class="food-accent" data-food="burger" style="right:16%;bottom:12%;width:140px"></span><span class="food-accent" data-food="fries" style="right:2%;bottom:30%;width:70px"></span>
-  <div class="wrap">
-    <div class="eyebrow">Next steps</div>
-    <h2>Week one</h2>
-    <ol>
-      <li>Get access to GA4, the GTM container, the app analytics, ad accounts and order data.</li>
-      <li>Replace the assumed baselines with real figures and agree the KPI targets.</li>
-      <li>Start the performance sprint and the tracking rebuild at the same time.</li>
-      <li>Set up the joint ops and digital loop with an owner for delivery-time alerts.</li>
-      <li>Connect the live dashboard so the client can track every metric on this page.</li>
-    </ol>
-    <p style="opacity:.7;margin-top:10px">Thank you. Anas Elshershaby</p>
   </div>
 </section>
 </main>
@@ -1475,7 +1467,7 @@ chart("ch-impact",(c,W)=>lineChart(c,W,{h:300,labels:MON,tipLabels:MON.map((m,i)
 seg("seg-scn",k=>{scn=+k;impact()});impact();
 
 /* issue tree jump */
-$$(".branch").forEach(b=>b.addEventListener("click",()=>{const t=document.getElementById(b.dataset.go);if(document.body.classList.contains("present")){goSlide(SL.indexOf(t))}else t.scrollIntoView({behavior:"smooth"})}));
+$$(".branch").forEach(b=>b.addEventListener("click",()=>{const t=document.getElementById(b.dataset.go);if(!t||t.classList.contains("cut"))return;if(document.body.classList.contains("present")){goSlide(SL.indexOf(t))}else t.scrollIntoView({behavior:"smooth"})}));
 
 /* ================= DASHBOARD (simulated) ================= */
 function rng(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -1572,16 +1564,16 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 /* reading progress + section rail + exec mode */
-const RSECT=$$("#report>section.s");
-RSECT.forEach((s,i)=>{if(!s.id)s.id="s"+(i+1)});
+const RALL=$$("#report>section.s");RALL.forEach((s,i)=>{if(!s.id)s.id="s"+(i+1)});
+const RS=()=>$$("#report>section.s:not(.cut)");
 const rail=document.createElement("nav");rail.className="rail";rail.setAttribute("aria-label","Sections");
-rail.innerHTML=RSECT.map(s=>`<a href="#${s.id}" data-id="${s.id}"><span>${esc(s.dataset.title)}</span><i></i></a>`).join("");
+function buildRail(){rail.innerHTML=RS().map(s=>`<a href="#${s.id}" data-id="${s.id}"><span>${esc(s.dataset.title)}</span><i></i></a>`).join("")}buildRail();
 document.body.appendChild(rail);
 rail.addEventListener("click",e=>{const a=e.target.closest("a");if(!a)return;e.preventDefault();document.getElementById(a.dataset.id).scrollIntoView({behavior:"smooth"})});
 const rprog=document.createElement("div");rprog.className="rprog";document.body.appendChild(rprog);
 function onScroll(){if($("#report").hidden||document.body.classList.contains("present")){rprog.style.width=0;rail.hidden=true;return}rail.hidden=false;
   const h=document.documentElement.scrollHeight-innerHeight;rprog.style.width=(h>0?scrollY/h*100:0)+"%";
-  let cur=RSECT[0].id;for(const s of RSECT){if(s.getBoundingClientRect().top<innerHeight*.35)cur=s.id}
+  const RR=RS();let cur=RR[0].id;for(const s of RR){if(s.getBoundingClientRect().top<innerHeight*.35)cur=s.id}
   rail.querySelectorAll("a").forEach(a=>a.classList.toggle("on",a.dataset.id===cur))}
 addEventListener("scroll",onScroll,{passive:true});addEventListener("resize",onScroll);
 const execBtn=$("#exec-tgl");
@@ -1600,7 +1592,7 @@ document.addEventListener("focusout",e=>{if(e.target.closest&&e.target.closest("
 
 /* section comment buttons (comments capability, composer only) */
 (async()=>{let cm=null;try{cm=await window.claude?.use?.("comments")}catch(e){}if(!cm)return;
-  RSECT.forEach(s=>{const t=document.createElement("div");t.className="s-tools";t.innerHTML=`<button type="button" aria-label="Comment on ${esc(s.dataset.title)}"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H8l-5 4V4a1 1 0 0 1 1-1z"/></svg>Comment</button>`;
+  RALL.forEach(s=>{const t=document.createElement("div");t.className="s-tools";t.innerHTML=`<button type="button" aria-label="Comment on ${esc(s.dataset.title)}"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H8l-5 4V4a1 1 0 0 1 1-1z"/></svg>Comment</button>`;
     t.querySelector("button").addEventListener("click",async()=>{try{await cm.openComposer({element:s.querySelector(".head,.copy,.wrap")||s})}catch(e){}});s.appendChild(t)})})();
 
 /* review explorer */
@@ -1962,7 +1954,7 @@ const BQ=[
  {q:"Do first-time customers come back?",src:"Order system + Tex Rewards CRM, linked by customer ID or phone number",
   nums:{UAE:[["64%","of new app customers don't reorder within 30 days",1],["35%","30-day repeat rate"],["2.0×","more reorders after an early reward"]],KSA:[["60%","of new app customers don't reorder within 30 days",1],["38%","30-day repeat rate"],["2.2×","more reorders after an early reward"]],Both:[["61%","of new app customers don't reorder within 30 days",1],["37%","30-day repeat rate"],["2.1×","more reorders after an early reward"]]},
   find:"The biggest loss is after the first order. Customers who get a reward early are about twice as likely to order again.",
-  act:"The 3-reward ladder: first reward at the second order, Gold status at the seventh (see the Loyalty chapter).",
+  act:"The 3-reward ladder: first reward at the second order, Gold status at the seventh (see the 3-reward ladder slide).",
   kpi:{UAE:"30-day repeat 35% → 45%",KSA:"30-day repeat 38% → 48%",Both:"30-day repeat +10 points in both markets"}},
  {q:"Which channels bring customers who stay, not just cheap clicks?",src:"Install-attribution tool (AppsFlyer or Adjust) + ad platforms + order system",
   nums:{UAE:[["5.0×","Google: AED 150 spent per AED 30 to win a customer"],["2.3×","Snapchat: AED 120 per AED 52",1]],KSA:[["5.7×","Snapchat: SAR 160 spent per SAR 28 to win a customer"],["1.6×","X: SAR 90 per SAR 55",1]],Both:[["5.7×","Best: KSA Snapchat"],["1.6×","Worst: KSA X",1],["4.1×","Blended, both markets"]]},
@@ -1987,7 +1979,7 @@ const BQ=[
  {q:"Why do website visitors leave without ordering?",src:"GA4 web + Lighthouse and Chrome real-user speed data",
   nums:{UAE:[["21.3 s","to show the main content (public)",1],["72%","of web visits are on mobile"],["59%","of mobile visitors leave without acting"]],KSA:[["21.6 s","to show the main content (public)",1],["68%","of web visits are on mobile"],["63%","of mobile visitors leave without acting"]],Both:[["~21 s","to show the main content (public)",1],["69%","of web visits are on mobile"],["62%","of mobile visitors leave without acting"]]},
   find:"Most website visitors are on a phone, and the page is very slow on a phone. They leave before they see the menu.",
-  act:"Speed sprint first, then the five website messages (Loyalty chapter) to turn visits into orders or app downloads.",
+  act:"Speed sprint first, then the five website messages (see the Website messages slide) to turn visits into orders or app downloads.",
   kpi:{UAE:"Load under 2.5 s; web conversion 2.2% → 3.2%",KSA:"Load under 2.5 s; web conversion 2.5% → 3.5%",Both:"Load under 2.5 s; web conversion +1 point"}}];
 let qi=0;
 function renderQ(){$("#q-list").innerHTML=BQ.map((x,i)=>`<button type="button" role="tab" aria-selected="${i===qi}" data-i="${i}"><span>${i+1}</span>${esc(x.q)}</button>`).join("");
@@ -2127,8 +2119,10 @@ document.addEventListener("touchend",e=>{if(vy==null||!document.body.classList.c
   if(dy<0&&vEdgeB&&si<SL.length-1)goSlide(si+1,"next");else if(dy>0&&vEdgeT&&si>0)goSlide(si-1,"prev")},{passive:true});
 
 /* ================= VIEWS & SLIDE DECK ================= */
-const SL=$$("#report>section.s");let si=0;
-const CH=[["Diagnosis",["Diagnosis","Key numbers","The brief, reframed","Issue tree"]],["Data & AI",["Business questions","Data sources","UAE vs KSA customers","Where AI fits"]],["Evidence",["01 · Reach","02 · Speed","03 · Trust","Customer voices","04 · Value","05 · Measurement"]],["Plan",["Prioritisation","Action tracker","Fix simulator","Market playbooks","Budget planner","Big ideas"]],["Loyalty",["Loyalty journey","Journey forecast","Website messages","3-reward ladder","Loyalty card","Scratch & win","Menu spotlight"]],["Results",["Measuring success","Impact model","Moments","Roadmap","Operating system","Ask the plan","Next steps"]]];
+let SL=$$("#report>section.s:not(.cut)");let si=0;
+const CH_SIMPLE=[["Approach",["Diagnosis","The brief, reframed"]],["1 · Questions",["Business questions"]],["2 · Data",["Data sources"]],["3 · Problems & solutions",["Key numbers","Issue tree","Prioritisation"]],["4 · UAE vs KSA",["UAE vs KSA customers","Where AI fits","Website messages","3-reward ladder"]],["5 · Measurement",["Measuring success","Impact model","Roadmap","Next steps"]]];
+const CH_FULL=[["Diagnosis",["Diagnosis","Key numbers","The brief, reframed","Issue tree"]],["Data & AI",["Business questions","Data sources","UAE vs KSA customers","Where AI fits"]],["Evidence",["01 · Reach","02 · Speed","03 · Trust","Customer voices","04 · Value","05 · Measurement"]],["Plan",["Prioritisation","Action tracker","Fix simulator","Market playbooks","Budget planner","Big ideas"]],["Loyalty",["Loyalty journey","Journey forecast","Website messages","3-reward ladder","Loyalty card","Scratch & win","Menu spotlight"]],["Results",["Measuring success","Impact model","Moments","Roadmap","Operating system","Ask the plan","Next steps"]]];
+let CH=CH_SIMPLE;
 function chapterOf(t){for(const c of CH)if(c[1].includes(t))return c[0];return "More"}
 SL.forEach(s=>{[...s.querySelector(".wrap").children].forEach((c,k)=>c.style.setProperty("--i",Math.min(k,8)))});
 function goSlide(i,dir){const n=Math.max(0,Math.min(SL.length-1,i));const d=dir||(n>=si?"next":"prev");si=n;skyMove(si);document.body.classList.toggle("on-hero",SL[si].classList.contains("hero"));
@@ -2146,6 +2140,21 @@ function setView(v){const pres=v==="present";document.body.classList.toggle("vie
   if(pres){let s=si;try{const x=sessionStorage.getItem("tc-slide");if(x!=null)s=+x}catch(e){}goSlide(s,"next")}else{SL.forEach(s=>s.classList.remove("on","in-next","in-prev"));try{history.replaceState(null,"","#"+(v==="dash"?"dashboard":"scroll"))}catch(e){}}
   if(v==="dash")renderDash();
   if(!pres)scrollTo(0,0);overview(false);onScroll()}
+
+/* simple vs full plan */
+let MODE="simple";
+const ORDER={simple:CH_SIMPLE.flatMap(c=>c[1]),full:CH_FULL.flatMap(c=>c[1])};
+function setMode(m){if(m===MODE)return;const cur=SL[si];MODE=m;document.body.classList.toggle("mode-full",m==="full");
+  $$("#g-mode button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===m));
+  const main=$("#report"),all=$$("#report>section.s"),byT={};all.forEach(s=>byT[s.dataset.title]=s);
+  ORDER[m].forEach(t=>{const s=byT[t];if(s){s.classList.remove("cut");main.appendChild(s)}});
+  all.forEach(s=>{if(!ORDER[m].includes(s.dataset.title)){s.classList.add("cut");s.classList.remove("on");main.appendChild(s)}});
+  CH=m==="full"?CH_FULL:CH_SIMPLE;SL=$$("#report>section.s:not(.cut)");
+  SL.forEach(s=>{[...s.querySelector(".wrap").children].forEach((c,k)=>c.style.setProperty("--i",Math.min(k,8)))});
+  buildRail();try{sessionStorage.removeItem("tc-slide")}catch(e){}
+  if(document.body.classList.contains("present")){let k=SL.indexOf(cur);goSlide(k>=0?k:0,"next")}else{onScroll()}
+  $$(".chart").forEach(c=>{const f=charts.get(c);if(f&&c.clientWidth>0)f()})}
+$("#g-mode").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setMode(b.dataset.k)});
 $$(".tabs button").forEach(b=>b.addEventListener("click",()=>setView(b.dataset.view)));
 $("#p-prev").onclick=()=>goSlide(si-1,"prev");$("#p-next").onclick=()=>{if(si===SL.length-1)overview(true);else goSlide(si+1,"next")};
 $("#p-full").onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{})}catch(e){}};
@@ -2155,7 +2164,7 @@ document.addEventListener("keydown",e=>{if(!document.body.classList.contains("pr
 let tx=null,ty=null;document.addEventListener("touchstart",e=>{if(e.target.closest("input,textarea,select,canvas,.flowline,.tbl-wrap,.rx-list"))return;tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
 document.addEventListener("touchend",e=>{if(tx==null||!document.body.classList.contains("present"))return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.5)goSlide(si+(dx<0?1:-1),dx<0?"next":"prev");tx=null},{passive:true});
 $$("#report a[href^='#'], .branch").forEach(()=>{});
-const h=location.hash.replace("#","");
+let h=location.hash.replace("#","");if(h==="full"){setMode("full");h=""}else{const tgt=document.getElementById(h);if(tgt&&tgt.classList.contains("cut"))setMode("full")}
 if(h==="dashboard")setView("dash");else if(h==="scroll"||h==="report")setView("report");else{const k=SL.findIndex(s=>s.id===h);if(k>=0){si=k;try{sessionStorage.setItem("tc-slide",k)}catch(e){}}setView("present")}
 renderDash();
 addEventListener("load",()=>{if(document.body.classList.contains("present"))scrollTo(0,0)});
